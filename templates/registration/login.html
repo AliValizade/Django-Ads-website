@@ -4,8 +4,13 @@
 
 {% block content %}
     {% if user.is_authenticated %}
-        <p>Welcome {{ user.username }} | <a href="{% url "logout" %}">Logout</a></p>
+        <p>Welcome {{ user.username }}</p>
+        <form action="{% url 'logout' %}" method="post">
+            {% csrf_token %}
+            <button type="submit">Logout</button>
+        </form>
     {% else %}
+        <p>If you don't have an account, please <a href="{% url "signup" %}">register</a> now.</p>
         <form action="" method="POST"> 
             {% csrf_token %}
             {{ form.as_p }}
