@@ -1,0 +1,18 @@
+{% extends "_base.html" %}
+
+{% block page_title %}Ad List{% endblock page_title %}
+
+
+{% block content %}
+    {% for ad in ads %}
+
+        <p> {{ ad.advertiser_name }} </p>
+        <a href="{{ ad.get_absolute_url }}">{{ ad.title }}</a>
+
+            {% if ad.main_image %}
+                <img src="{{ ad.main_image.image.url }}" alt="{{ ad.title }}">
+            {% endif %}
+            
+    {% endfor %}
+
+{% endblock content %}
