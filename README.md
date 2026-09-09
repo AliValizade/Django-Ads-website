@@ -1,8 +1,8 @@
-# Django Ads Website
+# Django Ads Website 
 
 A Django-based classified advertisements web application for managing categories, advertisements, advertiser information, images, and user accounts.
 
-## Overview
+## Overview 
 
 **Django Ads Website** is a web application built with Django for creating and managing classified advertisements.
 
